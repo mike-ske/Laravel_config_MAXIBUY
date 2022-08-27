@@ -12,7 +12,7 @@ use App\Models\Address;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-
+    use \Spiritix\LadaCache\Database\LadaCacheTrait;
     /**
      * The attributes that are mass assignable.
      *

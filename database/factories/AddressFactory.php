@@ -22,7 +22,7 @@ class AddressFactory extends Factory
     {
         return [
             'address_name' => fake()->text(),
-            'user_id' => factory(App\User::class)
+            'user_id' => User::factory()
         ];
     }
 }
