@@ -12,7 +12,7 @@ use App\Models\Address;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-    use \Spiritix\LadaCache\Database\LadaCacheTrait;
+    //use \Spiritix\LadaCache\Database\LadaCacheTrait;
     /**
      * The attributes that are mass assignable.
      *
@@ -44,6 +44,12 @@ class User extends Authenticatable
     ];
 
     public function address(){
-        return $this->hasOne(Address::class);
+        return $this->hasOne(Address::class, 'user_id');
     }
+
+    public function profile(){
+        return $this->hasOne(Profile::class, 'user_id');
+    }
+
+    
 }

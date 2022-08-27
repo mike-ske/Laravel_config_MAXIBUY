@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
     use HasFactory;
-    use \Spiritix\LadaCache\Database\LadaCacheTrait;
-    
+    //use \Spiritix\LadaCache\Database\LadaCacheTrait;
+
     protected $fillable = [
         'name',
         'email',
